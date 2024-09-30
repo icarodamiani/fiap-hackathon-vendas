@@ -27,7 +27,7 @@ public class PagamentoController {
         this.pagamentoMapper = pagamentoMapper;
     }
 
-    @PatchMapping("/{vendaId}/pagamentos/{id}/receber/")
+    @PatchMapping("/{vendaId}/pagamentos/{id}/receber")
     @Operation(description = "Atualiza um pagamento existente")
     public Mono<Void> receber(@PathVariable String vendaId, @PathVariable String id) {
         return pagamentoService.receber(vendaId,  id);
